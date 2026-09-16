@@ -11,9 +11,8 @@ import pymupdf
 from fastapi import FastAPI, File, Form, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-
 ROOT = Path(__file__).resolve().parent
-SOURCES_PATH = ROOT / "data" / "sources.json"
+SOURCES_PATH = ROOT / "sources.json"
 SOURCES = json.loads(SOURCES_PATH.read_text(encoding="utf-8"))
 SOURCE_BY_ID = {source["id"]: source for source in SOURCES}
 
