@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: bis-sahayak-api
+    runtime: docker
+    rootDir: backend
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: CORS_ORIGINS
+        value: http://localhost:3000
