@@ -16,7 +16,7 @@ export default function SourceDetailPage() {
 
   return (
     <main className="site-shell source-shell">
-      <nav className="topbar"><Link className="brand" href="/"><span className="brand-mark">B</span><span>BIS <strong>Sahayak</strong></span></Link><Link className="quiet-link" href="/analysis">← Back to readiness view</Link></nav>
+      <nav className="topbar"><Link className="brand" href="/"><span className="brand-mark">B</span><span>BIS <strong>Sahayak</strong></span></Link><Link className="quiet-link" href="/">← Back to readiness view</Link></nav>
       {error && <section className="empty-state"><h1>Source unavailable</h1><p>{error}</p><Link className="primary-button inline-button" href="/">Start a new check</Link></section>}
       {!source && !error && <main className="loading-screen"><span className="loading-orbit" /> Loading source record…</main>}
       {source && <>
